@@ -54,7 +54,7 @@ export default {
         </svg>
         <span>Auction</span>
       </button>
-      <button v-if="path === '/auction'" @click="buy(product.id)"
+      <button v-if="path === '/auction' && product.UserId != idUser" @click="buy(product.id)"
         class="rounded p-2 shadow-sm flex items-center justify-center space-x-1 mt-auto w-full bg-yellow-300 text-gray-900 hover:bg-yellow-400">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path

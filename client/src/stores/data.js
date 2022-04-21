@@ -2,7 +2,7 @@ import { defineStore } from "pinia";
 import axios from "axios";
 import router from "../router";
 import Swal from "sweetalert2";
-const baseUrl = "http://localhost:3000";
+const baseUrl = "https://iproject-verona-fox.herokuapp.com/";
 const headers = {
   access_token: localStorage.getItem("access_token"),
 };
@@ -111,6 +111,7 @@ export const useDataStore = defineStore({
               .then((result) => {
                 Swal.fire("Success", result.data.message, "success");
                 this.fetchProductByStatus();
+                router.push("/auction");
               })
               .catch((error) => {
                 console.log(error.response.data.message);
