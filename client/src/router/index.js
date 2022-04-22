@@ -49,7 +49,7 @@ router.beforeEach((to, from, next) => {
 
   if (token && (to.name === "login" || to.name === "register")) {
     next({ name: "home" });
-  } else if (!token && to.name === "home") {
+  } else if (!token && to.name === "basicContent") {
     next({ name: "loginPage" });
   } else {
     next();

@@ -2,7 +2,7 @@ import { defineStore } from "pinia";
 import axios from "axios";
 import router from "../router";
 import Swal from "sweetalert2";
-const baseUrl = "https://iproject-verona-fox.herokuapp.com/";
+const baseUrl = "http://localhost:3000";
 const headers = {
   access_token: localStorage.getItem("access_token"),
 };
